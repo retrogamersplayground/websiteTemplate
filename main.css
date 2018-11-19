@@ -1,0 +1,677 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*end of css reset*/
+
+
+
+
+/*variables*/
+
+:root {
+    --colorOne: #e0dce8;
+    --colorTwo: #D9239C;
+    --colorThree: #222428;
+    --colorFour: #ffffff;
+    --colorFive: #000000;
+    --fontOne: 'Poiret One', cursive;
+    --fontTwo: 'News Cycle', sans-serif;
+}
+
+
+
+/*nav sytle*/
+
+nav {
+    background-color: var(--colorThree);
+    font-family: var(--fontTwo);
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 50%;
+}
+
+.topnav ul li {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--colorFour);
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    color: var(--colorTwo);
+}
+
+.icon {
+    display: none;
+}
+
+@media only screen and (max-width: 967px) {
+
+    ul{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    .topnav ul li {
+        display: none;
+    }
+    
+    .topnav a.icon {
+        display: inline-block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 90%;
+    }
+
+    .topnav.responsive ul li {
+        display: block;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid var(--colorOne);
+      }
+    
+    .topnav ul {
+        width: 100%;
+    }
+
+}
+
+
+/*showcase*/
+
+#showcase {
+    background-image: url("img/showcaseImg3.jpg"); /* The image used */
+    background-color: var(--colorFour); /* Used if the image is unavailable */
+    height: 900px; /* You must set a specified height */
+    background-position: center;/* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    text-align: center;
+}
+
+.showcaseDiv {
+    width: 60%;
+    padding-top: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.showcaseH1 {
+    font-family: var(--fontOne);
+    font-size: 6em;
+    color: var(--colorFour);
+    text-shadow: 1px 1px 2px var(--colorFive), 0 0 1em var(--colorTwo), 0 0 0.2em var(--colorTwo);
+}
+
+.showcaseParagraph {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: var(--fontTwo);
+    font-size: 2em;
+    color: var(--colorFour);
+    text-shadow: 1px 1px 2px var(--colorFive), 0 0 1em var(--colorTwo), 0 0 0.2em var(--colorTwo);
+}
+
+.showcaseButton {
+    width: 200px;
+    padding: 20px;
+    font-family: var(--fontTwo);
+    font-size: 1.5em;
+    background-color: var(--colorTwo);
+    color: var(--colorFour);
+    border: none;
+}
+
+.showcaseButton:hover {
+    background-color: var(--colorThree);
+}
+
+@media only screen and (max-width: 969px) {
+    .showcaseDiv {
+        padding-top: 300px;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .showcaseDiv {
+        padding-top: 250px;
+    }
+}
+
+@media only screen and (max-width: 608px) {
+    .showcaseH1 {
+        font-size: 5em;
+    }
+
+    .showcaseDiv {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .showcaseDiv {
+        padding-top: 150px;
+    }
+
+    .showcaseH1 {
+        font-size: 3.5em;
+    }
+
+    .showcaseParagraph {
+        font-size: 1.5em;
+    }
+}
+
+/*services*/
+
+.servicesDiv {
+    text-align: center;
+}
+
+.servicesH2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 3em;
+    font-family: var(--fontTwo);
+    color: var(--colorThree);
+}
+
+.servicesDiv div {
+    display: inline-block;
+    width: 30%;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    background-color: ;
+}
+
+.servicesImg {
+    width: 60%;
+    margin-bottom: 10px;
+} 
+
+.servicesH3 {
+    font-size: 2em;
+    font-family: var(--fontTwo);
+    color: var(--colorThree);
+    margin-bottom: 10px;
+}
+
+.servicesP {
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    color: var(--colorThree);
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 819px) {
+
+    .servicesImg {
+        width: 75%;
+    }
+
+    .servicesP {
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (max-width: 819px) {
+
+    .servicesDiv div {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .servicesImg {
+        width: 50%;
+    }
+}
+
+/*call to Action*/
+
+.callToActionDiv {
+    text-align: center;
+}
+
+.callToActionH2 {
+    font-size: 3em;
+    font-family: var(--fontOne);
+    color: var(--colorThree);
+    text-shadow: 1px 1px 2px var(--colorFive), 0 0 1em var(--colorTwo), 0 0 0.2em var(--colorTwo);
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.callToActionP {
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    margin-bottom: 20px
+}
+
+.callToActionButton {
+    width: 200px;
+    padding: 20px;
+    font-family: var(--fontTwo);
+    font-size: 1.5em;
+    background-color: var(--colorTwo);
+    color: var(--colorFour);
+    margin-bottom: 50px;
+    border: none;
+}
+
+.callToActionButton:hover {
+    background-color: var(--colorThree);
+}
+
+/*team*/
+
+.teamDiv {
+    text-align: center;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    background-color: var(--colorOne);
+}
+
+.teamH2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 3em;
+    font-family: var(--fontTwo);
+    color: var(--colorThree);
+}
+
+.teamDiv div {
+    display: inline-block;
+    width: 30%;
+    padding-bottom: 150px;
+    background-color:;
+}
+
+.teamImg {
+    width: 60%;
+    margin-bottom: 10px;
+} 
+
+.teamH3 {
+    font-size: 2em;
+    font-family: var(--fontTwo);
+    color: var(--colorThree);
+    margin-bottom: 10px;
+}
+
+.teamP {
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    color: var(--colorThree);
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*testimonials*/
+
+.testimonialSection {
+    background-color: var(--colorOne);
+    text-align: center;
+}
+
+.testimonialDiv {
+    background-color: var(--colorFour);
+    color: var(--colorThree);
+    font-family: var(--fontTwo);
+    font-size: 1.25em;
+    line-height: 1.25;
+    text-align: left;
+    width: 25%;
+    display: inline-block;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.testimonialDiv p {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.testimonialName {
+    text-align: right;
+    padding-bottom: 30px;
+}
+
+#testimonialH2 {
+    color: var(--colorThree);
+    font-family: var(--fontTwo);
+    font-size: 3em;
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .testimonialSection {
+        padding-bottom: 50px;
+    }
+
+    .testimonialDiv {
+        width: 29%;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1001px) {
+
+    .testimonialDiv {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+}
+
+/*footer*/
+
+footer {
+    background-color: var(--colorThree); 
+    color: var(--colorOne);
+    font-family: var(--fontTwo);
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#footerH2 {
+    font-size: 3em;
+    font-family: var(--fontOne);
+    color:  var(--colorFour);
+    text-shadow: 1px 1px 2px var(--colorFive), 0 0 1em var(--colorTwo), 0 0 0.2em var(--colorTwo);
+    margin-bottom: 10px;
+}
+
+.footerParagraph {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.socialMedia ul {
+    margin-left: auto;
+}
+
+.socialMedia ul li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+footer a {
+    color: var(--colorFour);
+}
+
+footer a:hover {
+    color: var(--colorTwo);
+}
+
+/*contact*/
+
+.contactH1 {
+    text-align: center;
+    font-family: var(--fontOne);
+    font-size: 4em;
+    color: var(--colorThree);
+    text-shadow: 1px 1px 2px var(--colorFive), 0 0 1em var(--colorTwo), 0 0 0.2em var(--colorTwo);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contactContainer {
+    background-color: var(--colorOne);
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+.contactFormDiv {
+    display: inline-block;
+    width: 48%;
+    background-color:;
+}
+
+form {
+    width:100%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    border: none;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+textarea {
+    display: block;
+    padding: 0;
+    width: 100%;
+    border: none;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#submit {
+    border: none;
+    background-color: var(--colorTwo);
+    padding-top: 20px;
+    color: var(--colorFour);
+    margin-bottom: 100px;
+    border: none'
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: var(--colorThree);
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    form {
+        width: 60%;
+    }  
+
+}
+
+@media only screen and (max-width: 415px) {
+
+    form {
+        width: 80%;
+    }
+
+}
+
+/*about*/
+.missionDiv {
+    background-color: var(--colorOne);
+    padding-top: 250px;
+    padding-bottom: 150px;
+}
+
+.missionH1 {
+    text-align: center;
+    font-family: var(--fontOne);
+    font-size: 4em;
+    color: var(--colorThree);
+    text-shadow: 1px 1px 2px var(--colorFive), 0 0 1em var(--colorTwo), 0 0 0.2em var(--colorTwo);
+    margin-bottom: 20px;
+}
+
+.missionP {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    margin-bottom: 250px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.aboutH2 {
+    text-align: center;
+    font-size: 3em;
+    font-family: var(--fontTwo);
+    margin-top: 250px;
+    margin-bottom: 20px;
+}
+
+.aboutP {
+    text-align: justify;
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    margin-bottom: 250px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+/*location*/
+
+.locationH2 {
+    text-align: center;
+    font-size: 3em;
+    font-family: var(--fontTwo);
+    margin-bottom: 150px;
+}
+
+.locationDiv {
+    margin-bottom: 250px;
+}
+
+.addressDiv {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: center;
+    background-color:;
+}
+
+.addressDiv a {
+    color: var(--colorThree);
+}
+
+.addressDiv a:hover {
+    color: var(--colorTwo);
+}
+
+.addressWrapper {
+    margin-top: 100px;
+}
+
+.businessH3 {
+    font-size: 2.5em;
+    font-family: var(--fontTwo);
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.street {
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    margin-bottom: 10px;
+}
+
+.city {
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    margin-bottom: 10px;
+}
+
+.phone {
+    font-size: 1.5em;
+    font-family: var(--fontTwo);
+    margin-bottom: 50px;
+}
+
+.mapDiv {
+    display: inline-block;
+    width: 48%;
+}
+
+
+
